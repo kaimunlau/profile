@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  color: #2A313C;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(172deg, rgba(200,189,219,1) 0%, rgba(42,49,60,1) 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: #53687E;
+  color: whitesmoke;
+  padding: 32px 128px;
+  box-shadow: 7px 5px 17px 5px rgba(0,0,0,0.66);
+  max-width: 50%;
+  margin: 64px auto;
+  transition: .25s ease-in-out;
+}
+
+.anim-1 {
+  animation: fadeIn 1s ease-in;
+  animation-delay: .3s;
+  /* animation-fill-mode: backwards; */
+}
+
+.anim-2 {
+  animation: fadeIn 1s ease-in;
+  animation-delay: .5s;
+  /* animation-fill-mode: backwards; */
+}
+
+.anim-3 {
+  animation: fadeIn 1s ease-in;
+  animation-delay: .7s;
+  /* animation-fill-mode: backwards; */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+    transform: translateX(-10%);
+    scale: .8;
+  }
+}
+
+.card:hover {
+  box-shadow: 7px 5px 17px 5px rgba(0,0,0,0.80);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  margin: 16px 0;
+}
+
+h1 {
+  letter-spacing: 1.25rem;
+}
+
+h2 {
+  letter-spacing: .5rem;
+}
+
+h3 {
+  letter-spacing: .25rem;
+}
+
+p {
+  margin: 32px 0;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+a, button {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+code {
+  background-color: rgba(42, 49, 60, 0.3);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid whitesmoke;
+}
+
+#header a {
+  letter-spacing: 0;
+}
+
+.shadow {
+  box-shadow: 7px 5px 17px -1px rgba(0,0,0,0.2);
+}
+
+#header p {
+  margin-top: 64px;
+}
+
+.inline {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 16px;
+}
+
+.btn-cta {
+  background-color: #BEBDC7;
+  border: 0;
+  padding: 16px 64px;
+  font-weight: 500;
+  transition: .3s ease-in-out;
+}
+
+.btn-cta:hover {
+  background-color: #2A313C;
+  color: whitesmoke;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  gap: 32px;
+}
+
+li {
+  font-size: 4rem;
+}
+
+li a {
+  color: whitesmoke;
+  transition: .3s ease-in-out;
+}
+
+li a i {
+  text-shadow: 0 0 10px rgba(0,0,0,0.2), 0 0 20px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.2);
+}
+
+li a:hover {
+  color: #2A313C;
+}
+
+#line {
+  position: relative;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(42,49,60,1) 0%, rgba(245,245,245,0.5) 100%);
+  margin: 64px 0;
+}
+
+.circle-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: -6px
+}
+
+.circle {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  transition: .3s ease-in-out;
+}
+
+.circle:hover {
+  background-color: #2A313C;
+}
+
+.circle:hover span {
+  color: #2A313C;
+}
+
+.circle span {
+  position: absolute;
+  min-width: 150px;
+  top: 24px;
+  left: -65px;
+  font-size: .8rem;
+  font-weight: 300;
+  transition: .3s ease-in-out;
+  user-select: none;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+
+  .card {
+    margin: 64px auto;
+    max-width: 80%;
+    padding: 32px;
+  }
+
+  #header-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #line {
+    width: 4px;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(42,49,60,1) 0%, rgba(245,245,245,0.5) 100%);
+    margin: 64px auto;
+  }
+
+  .circle-container {
+    flex-direction: column;
+    justify-content: space-between;
+    left: -7px;
+    height: 105%;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
